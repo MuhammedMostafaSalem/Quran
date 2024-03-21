@@ -1,6 +1,10 @@
+import Header from "./components/utils/Header"
+
 function App() {
   return (
-    <div>Welcom to Quran</div>
+    <div>
+      <Header />
+    </div>
   )
 }
 
