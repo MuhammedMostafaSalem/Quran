@@ -8,3 +8,39 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+/* header */
+.nav li {
+  position: relative;
+}
+.nav li a::before {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  height: 2px;
+  width: 10px;
+  left: 0;
+  top: -3px;
+  transition: 1s;
+}
+.nav li a:hover::before {
+  width: 100%;
+}
+
+@media (max-width: 575px) {
+  .nav li a::before {
+    content: "";
+    display: none;
+  }
+  .nav li a:hover {
+    color: #22b3c1;
+  }
+  .nav li {
+    padding: 10px 0;
+  }
+  .nav li:not(:last-child) {
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    text-align: center;
+  }
+}
