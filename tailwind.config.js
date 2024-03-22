@@ -23,6 +23,7 @@ export default withMT({
       'xl': '1200px',
       '2xl': '1400px',
       "sm-max": { max: "575px" },
+      "md-max": { max: "767px" },
     },
     extend: {},
   },
