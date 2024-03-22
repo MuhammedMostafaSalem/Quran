@@ -3,7 +3,7 @@ import Banner from '../components/Banner'
 
 const Surah = () => {
     return (
-        <div>
+        <div className='relative top-[80px]'>
             <Banner />
         </div>
     )
