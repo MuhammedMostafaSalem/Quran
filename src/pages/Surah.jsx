@@ -1,10 +1,12 @@
 import React from 'react'
 import Banner from '../components/Banner'
+import SearchForm from '../components/SearchForm'
 
 const Surah = () => {
     return (
-        <div className='relative top-[80px]'>
+        <div>
             <Banner />
+            <SearchForm />
         </div>
     )
 }
