@@ -38,6 +38,8 @@ const Header = () => {
                     sm-max:text-[#000]
                     sm-max:duration-1000
                     sm-max:gap-[0]
+                    sm-max:shadow
+                    sm-max:rounded-b-[30px]
                     ${!isOpen ? "sm-max:left-[100%]" : "sm-max:left-0"}
                     `}
                 >
@@ -74,7 +76,7 @@ const Header = () => {
 
                 </ul>
 
-                <div className='sm:hidden'>
+                <div className='sm:hidden mt-3'>
                     <Hamburger toggled={isOpen} toggle={setIsOpen} size={20} color="#fff"/>
                 </div>
             </div>
