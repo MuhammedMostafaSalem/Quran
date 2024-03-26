@@ -1,3 +1,4 @@
+import Footer from "./components/utils/Footer"
 import Header from "./components/utils/Header"
 import Surah from "./pages/Surah"
 
@@ -6,6 +7,7 @@ function App() {
     <div>
       <Header />
       <Surah />
+      <Footer />
     </div>
   )
 }
