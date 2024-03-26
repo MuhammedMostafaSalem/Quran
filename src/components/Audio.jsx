@@ -2,12 +2,13 @@ import React from 'react'
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 
-const Audio = () => {
+const Audio = ({selectedSurah}) => {
     return (
-        <div className='relative top-[30px]'>
+        <div className='fixed mt-[30px] bottom-0 w-full z-[100]'>
             <AudioPlayer
                 autoPlay={false}
-                src="https://server6.mp3quran.net/akdr/001.mp3"
+                showJumpControls={false}
+                src={`${selectedSurah}`}
                 onPlay={e => console.log("onPlay")}
             />
         </div>
