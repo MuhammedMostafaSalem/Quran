@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import logo from '.././../assets/images/logo.png'
 import { Typography } from "@material-tailwind/react";
 import { Cross as Hamburger } from 'hamburger-react'
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -53,9 +54,9 @@ const Header = () => {
                         as="li"
                         className="font-normal text-[16px]"
                     >
-                        <a href="#" className=''>
+                        <Link to='/live'>
                         Live
-                        </a>
+                        </Link>
                     </Typography>
                     <Typography
                         as="li"
