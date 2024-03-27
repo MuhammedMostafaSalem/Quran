@@ -48,8 +48,13 @@
 
 /* banner */
 .banner {
-  background-color: #333;
   background-image: url(./assets/images/neom-AdkJ-LgpTrE-unsplash.jpg);
+}
+.bannerLive {
+  background-image: url(./assets/images/2150999796.jpg);
+}
+.banner , .bannerLive {
+  background-color: #333;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -64,7 +69,7 @@
   left: 0;
   z-index: 1;
 }
-.banner .banner-text {
+.banner .banner-text , .bannerLive .banner-text {
   position: absolute;
   width: 80%;
   left: 50%;
