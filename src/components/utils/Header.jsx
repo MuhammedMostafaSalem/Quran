@@ -62,9 +62,9 @@ const Header = () => {
                         as="li"
                         className="font-normal text-[16px]"
                     >
-                        <a href="#" className=''>
+                        <Link to='/tafsir'>
                         Tafasir
-                        </a>
+                        </Link>
                     </Typography>
                     <Typography
                         as="li"
