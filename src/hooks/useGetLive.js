@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllLive } from '../store/Actions/livTvAction';
 
-const useGetLive = () => {
+const useGetLive = (language) => {
     const dispatch = useDispatch();
     const {livTv} = useSelector(state => state.livTv);
     const [activeTab, setActiveTab] = useState(0);
@@ -21,8 +21,10 @@ const useGetLive = () => {
     } catch(err) {}
 
     useEffect(() => {
-        dispatch(getAllLive())
-    }, [])
+        if(livTv) {
+            dispatch(getAllLive({language}))
+        }
+    }, [livTv, dispatch])
 
     return [
         liveData,
