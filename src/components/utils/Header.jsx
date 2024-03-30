@@ -3,8 +3,10 @@ import logo from '.././../assets/images/logo.png'
 import { Typography, Button } from "@material-tailwind/react";
 import { Cross as Hamburger } from 'hamburger-react'
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
-const Header = () => {
+const Header = ({langs, handleChangeLang}) => {
+    const { t } = useTranslation();
     const location = useLocation();
     const [isOpen, setIsOpen] = useState(false)
 
@@ -51,7 +53,7 @@ const Header = () => {
                             }
                             onClick={() => setIsOpen(false)}
                         >
-                            <Link to='/'>Surah</Link>
+                            <Link to='/'>{t('Surah')}</Link>
                         </Typography>
                         <Typography
                             as="li"
@@ -59,9 +61,7 @@ const Header = () => {
                             }
                             onClick={() => setIsOpen(false)}
                         >
-                            <Link to='/live'>
-                            Live
-                            </Link>
+                            <Link to='/live'>{t('Live')}</Link>
                         </Typography>
                         <Typography
                             as="li"
@@ -69,20 +69,31 @@ const Header = () => {
                             }
                             onClick={() => setIsOpen(false)}
                         >
-                            <Link to='/tafsir'>
-                            Tafasir
-                            </Link>
+                            <Link to='/tafsir'>{t('Tafasir')}</Link>
                         </Typography>
                     </ul>
 
 
-                    <Button
-                        variant="text"
-                        size="sm"
-                        className="mt-3 sm:mt-[10px] capitalize text-white iconLang"
-                    >
-                        <span>en</span>
-                    </Button>
+                    {
+                        langs === "ar" ? 
+                            <Button
+                                variant="text"
+                                size="sm"
+                                className="mt-3 sm:mt-[10px] capitalize text-white iconLang"
+                                onClick={() => handleChangeLang('eng')}
+                            >
+                                <span>en</span>
+                            </Button>
+                        :
+                        <Button
+                            variant="text"
+                            size="sm"
+                            className="mt-3 sm:mt-[10px] capitalize text-white iconLang"
+                            onClick={() => handleChangeLang('ar')}
+                        >
+                            <span>ar</span>
+                        </Button>
+                    }
 
                     <div className='sm:hidden mt-3'>
                         <Hamburger toggled={isOpen} toggle={setIsOpen} size={20} color="#fff"/>
