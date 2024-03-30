@@ -3,8 +3,10 @@ import Banner from '../components/Banner'
 import SearchForm from '../components/SearchForm'
 import Audio from '../components/Audio'
 import useGetMoshaf from '../hooks/useGetMoshaf'
+import { useSelector } from 'react-redux'
 
 const Surah = () => {
+    const { language } = useSelector(state => state.lang);
     const [
         selectedOption,
         selectedSurah,
@@ -14,7 +16,7 @@ const Surah = () => {
         surahData,
         server,
         onClickSurah
-    ] = useGetMoshaf();
+    ] = useGetMoshaf(language);
 
     return (
         <div>
