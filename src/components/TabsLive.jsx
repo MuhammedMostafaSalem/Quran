@@ -1,13 +1,15 @@
 import React from 'react'
 import ReactPlayer from 'react-player';
 import useGetLive from '../hooks/useGetLive';
+import { useSelector } from 'react-redux';
 
 const TabsLive = () => {
+    const { language } = useSelector(state => state.lang);
     const [
         liveData,
         activeTab,
         handleTabClick,
-    ] = useGetLive();
+    ] = useGetLive(language);
     
     return (
         <div className="flex flex-col container mx-auto mt-[100px]">
