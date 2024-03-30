@@ -4,7 +4,7 @@ import { Typography } from "@material-tailwind/react";
 const SearchForm = ({selectedOption, nameData, handleSelectChange, handleClearData, surahData, server, onClickSurah}) => {
 
     return (
-        <div className='relative z-[5]'>
+        <div className='relative z-[5] sm-max:px-[20px]'>
             <div className='container mx-auto p-[30px] bg-[#fff] shadow-lg rounded-[30px]'>
                 <form
                     className={`
