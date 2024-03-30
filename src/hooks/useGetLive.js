@@ -19,7 +19,6 @@ const useGetLive = () => {
             liveData =[]
         }
     } catch(err) {}
-    console.log(liveData)
 
     useEffect(() => {
         dispatch(getAllLive())
