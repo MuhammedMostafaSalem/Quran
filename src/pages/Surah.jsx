@@ -4,8 +4,11 @@ import SearchForm from '../components/SearchForm'
 import Audio from '../components/Audio'
 import useGetMoshaf from '../hooks/useGetMoshaf'
 import { useSelector } from 'react-redux'
+import Head from '../components/utils/Head'
+import { useTranslation } from 'react-i18next'
 
 const Surah = () => {
+    const { t } = useTranslation();
     const { language } = useSelector(state => state.lang);
     const [
         selectedOption,
@@ -19,7 +22,7 @@ const Surah = () => {
     ] = useGetMoshaf(language);
 
     return (
-        <div>
+        <Head title={t('Surah')}>
             <Banner />
             <SearchForm
                 selectedOption={selectedOption}
@@ -35,7 +38,7 @@ const Surah = () => {
                     <Audio selectedSurah={selectedSurah} />
                 : null
             }
-        </div>
+        </Head>
     )
 }
 
