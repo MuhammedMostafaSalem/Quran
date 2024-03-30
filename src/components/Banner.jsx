@@ -2,7 +2,7 @@ import React from 'react'
 
 const Banner  = () => {
     return (
-        <div className="banner relative top-[70px]">
+        <div className="banner relative top-[70px] sm:top-[60px] md:top-[70px]">
             <div className="overlay"></div>
             <div className="banner-text">
                 <h6 className='text-[10px] sm:text-[15px] md:text-[18px] uppercase font-[700] tracking-[2.5px]'>A pleasant journey in the realms of the</h6>
