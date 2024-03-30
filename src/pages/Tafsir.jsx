@@ -2,14 +2,16 @@ import React from 'react'
 import TafsirList from '../components/TafsirList'
 import Audio from '../components/Audio';
 import useGetTafsir from '../hooks/useGetTafsir';
+import { useSelector } from 'react-redux';
 
 const Tafsir = () => {
+    const { language } = useSelector(state => state.lang);
     const [
         tafasirData,
         soarData,
         selectedSurah,
         onClickSurah,
-    ] = useGetTafsir();
+    ] = useGetTafsir(language);
     
     return (
         <div className='mt-[70px] sm:mt-[60px] md:mt-[70px]'>
