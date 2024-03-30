@@ -1,12 +1,15 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next';
 
 const Banner  = () => {
+    const { t } = useTranslation();
+
     return (
         <div className="banner relative top-[70px] sm:top-[60px] md:top-[70px]">
             <div className="overlay"></div>
             <div className="banner-text">
-                <h6 className='text-[10px] sm:text-[15px] md:text-[18px] uppercase font-[700] tracking-[2.5px]'>A pleasant journey in the realms of the</h6>
-                <h2 className='text-[30px] sm:text-[40px] md:text-[45px] font-[700] uppercase mt-[15px] mb-[25px]'><span className='text-[#22b3c1]'>Quran</span> Karem</h2>
+                <h6 className='text-[10px] sm:text-[15px] md:text-[18px] uppercase font-[700] tracking-[2.5px]'>{t('journey')}</h6>
+                <h2 className='text-[30px] sm:text-[40px] md:text-[45px] font-[700] uppercase mt-[15px] mb-[25px]'><span className='text-[#22b3c1]'>{t('Quran')}</span> {t('Karem')}</h2>
             </div>
         </div>
     )
