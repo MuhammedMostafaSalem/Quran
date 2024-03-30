@@ -9,6 +9,21 @@
   box-sizing: border-box;
 }
 
+/* style scroll-bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #22b3c1;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #1fa0ac;
+}
+
 /* header */
 .nav li {
   position: relative;
