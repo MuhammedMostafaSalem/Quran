@@ -1,7 +1,9 @@
 import React from 'react'
 import { Typography } from "@material-tailwind/react";
+import { useTranslation } from 'react-i18next';
 
 const SearchForm = ({selectedOption, nameData, handleSelectChange, handleClearData, surahData, server, onClickSurah}) => {
+    const { t } = useTranslation();
 
     return (
         <div className='relative z-[5] sm-max:px-[20px]'>
@@ -13,9 +15,7 @@ const SearchForm = ({selectedOption, nameData, handleSelectChange, handleClearDa
                     `}
                 >
                     <div className='w-full'>
-                        <Typography variant="h6" color="blue-gray">
-                        Choose Reciter
-                        </Typography>
+                        <Typography variant="h6" color="blue-gray">{t('Reciter')}</Typography>
                         <select
                             value={selectedOption}
                             onChange={handleSelectChange}
@@ -34,7 +34,7 @@ const SearchForm = ({selectedOption, nameData, handleSelectChange, handleClearDa
                             focus:outline-none
                             focus:shadow-outline"
                         >
-                            <option value="0">Select an option</option>
+                            <option value="0">{t('SelectOption')}</option>
                             {
                                 nameData.map(option => (
                                     <option key={option.id} value={option.id}>
@@ -47,9 +47,7 @@ const SearchForm = ({selectedOption, nameData, handleSelectChange, handleClearDa
                     {
                         selectedOption > 0 ?
                             <div className='w-full'>
-                                <Typography variant="h6" color="blue-gray">
-                                    Choose Suwar
-                                </Typography>
+                                <Typography variant="h6" color="blue-gray">{t('Suwar')}</Typography>
                                 <select
                                     className="block
                                     appearance-none
@@ -68,7 +66,7 @@ const SearchForm = ({selectedOption, nameData, handleSelectChange, handleClearDa
                                     focus:shadow-outline"
                                     onChange={(e) => onClickSurah(e.target.value)}
                                 >
-                                    <option value="0">Select an option</option>
+                                    <option value="0">{t('SelectOption')}</option>
                                     {
                                         surahData.map(option => (
                                             <option key={option.id} value={`${server}${String(option.id).padStart(3, '0')}.mp3`}>
