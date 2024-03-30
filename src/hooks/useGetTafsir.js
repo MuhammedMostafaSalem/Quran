@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllTafasir } from "../store/Actions/tafasirAction";
 
-const useGetTafsir = () => {
+const useGetTafsir = (language) => {
     const dispatch = useDispatch();
     const {tafasir} = useSelector(state => state.tafsir);
     const [selectedSurah, setSelectedSurah] = useState('');
@@ -30,8 +30,10 @@ const useGetTafsir = () => {
     }
     
     useEffect(() => {
-        dispatch(getAllTafasir());
-    }, [])
+        if(tafasir) {
+            dispatch(getAllTafasir({language}));
+        }
+    }, [tafasir, dispatch])
 
     return [
         tafasirData,
