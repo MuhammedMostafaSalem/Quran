@@ -42,6 +42,9 @@ const useGetMoshaf = (language) => {
     const handleClearData = () => {
         setSelectedOption('');
         setSelectedSurah('');
+        setTimeout(() => {
+            window.location.reload();
+        }, 1000)
     };
 
     let surahData = []
