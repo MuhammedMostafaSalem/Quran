@@ -93,7 +93,7 @@ const SearchForm = ({selectedOption, nameData, handleSelectChange, handleClearDa
                             cursor-pointer'
                             onClick={handleClearData}
                         >
-                            Clear reciter
+                            {t('Clear reciter')}
                         </div>
                     : null
                 }
