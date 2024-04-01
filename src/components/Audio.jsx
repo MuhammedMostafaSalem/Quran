@@ -8,8 +8,7 @@ const Audio = ({selectedSurah}) => {
             <AudioPlayer
                 autoPlay={false}
                 showJumpControls={false}
-                src={`${selectedSurah}`}
-                onPlay={e => console.log("onPlay")}
+                src={selectedSurah}
             />
         </div>
     )
