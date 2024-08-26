@@ -51,10 +51,10 @@
 
 /* banner */
 .banner {
-  background-image: url(./assets/images/neom-AdkJ-LgpTrE-unsplash.jpg);
+  background-image: url(./assets/images/img-home.jpg);
 }
 .bannerLive {
-  background-image: url(./assets/images/2150999796.jpg);
+  background-image: url(./assets/images/img-live.jpg);
 }
 .banner , .bannerLive {
   background-color: #333;
